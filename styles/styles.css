@@ -1,0 +1,50 @@
+nav{
+    background-color: rgb(243, 3, 3);
+    padding: 20px;
+}
+
+nav a {
+    color: rgb(6, 0, 0);
+    display: block;
+    padding: 30px;
+}
+
+main {
+    max-width: 840;
+}
+
+h1{
+    color: rgb(0, 0, 8);
+}
+
+main img{
+    width: 150px;
+    height: auto;
+    border: 3px solid rgb(15, 0, 0);
+    padding: 1px;
+    box-shadow: 0 0 10px rgb(10, 10, 10);
+}
+
+p { padding: 0px;}
+
+aside {
+    width: 300;
+    margin: 0rem;
+    border: 1px solid rgb(222, 16, 16);
+    padding: 10px; 
+    background-color: #0206f8;
+    color: #0726f0
+    text-align center;
+    color: white;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
