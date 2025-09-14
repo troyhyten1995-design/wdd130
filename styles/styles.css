@@ -10,7 +10,7 @@ nav a {
 }
 
 main {
-    max-width: 840;
+    max-width: 840px;
 }
 
 h1{
@@ -28,13 +28,13 @@ main img{
 p { padding: 0px;}
 
 aside {
-    width: 300;
+    width: 300px;
     margin: 0rem;
     border: 1px solid rgb(222, 16, 16);
     padding: 10px; 
     background-color: #0206f8;
-    color: #0726f0
-    text-align center;
+    color: #0726f0;
+    text-align: center;
     color: white;
 }
 
