@@ -27,7 +27,7 @@ h1, h2{
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
-
+/* hi */
 nav, p, section, article {
 margin: 16px;
 padding: 8px;
