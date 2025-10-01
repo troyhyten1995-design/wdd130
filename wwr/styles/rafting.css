@@ -1,83 +1,248 @@
+/* ---------- CSS Variables & Base ---------- */
 :root {
-     --primary-color:#055a05; /* forestgreen */
-    --secondary-color: #fff; /* white */
-    --accent1-color: #264653; /* dark slate blue */
-    --accent2-color: #e9c46a; /*light golden yellow*/
-    --heading-font: "Times New Roman", "Gerogia", serif;
-    --body-font: Ariel, Helvetica, sans-serif;
+  --primary-color: #055a05;          /* forest green */
+  --secondary-color: #ffffff;         /* white */
+  --accent1-color: #264653;           /* dark slate blue */
+  --accent2-color: #e9c46a;           /* light golden yellow */
+
+  --heading-font: "Times New Roman", Georgia, serif;
+  --body-font: Arial, Helvetica, sans-serif;
+
+  --maxw: 840px;
+  --radius: 8px;
+  --space-1: 8px;
+  --space-2: 16px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-header, main, footer{
-    width: 840px;
-    margin: 0 auto;
+html, body {
+  height: 100%;
 }
-
-header {
-    background-color: var(--secondary-color);
-    color: var(--accent2-color);
-}
-
-h1, h2{
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-/* hi */
-nav, p, section, article {
-margin: 16px;
-padding: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
 
 body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background: #f7f7f7;
+  line-height: 1.5;
 }
 
-.hero{
-    position: relative;
+/* Constrain main sections to 840px */
+header, main, footer {
+  width: var(--maxw);
+  margin: 0 auto;
+  background: var(--secondary-color);
+}
+
+/* ---------- Header (Grid) & Nav (Flex) ---------- */
+.site-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-bottom: 4px solid var(--accent2-color);
+  background: var(--secondary-color);
+}
+
+.logo {
+  display: block;
+  height: 64px;
+  width: auto;
+}
+
+/* Nav uses Flex for horizontal layout */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--accent1-color);
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #eef3f6;
+  outline: none;
+}
+
+.site-nav a[aria-current="page"] {
+  background: var(--accent1-color);
+  color: var(--secondary-color);
+}
+
+/* ---------- Headings ---------- */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  margin-top: var(--space-2);
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  padding: 12px var(--space-2);
+  text-align: center;
+  background-color: rgba(38, 70, 83, 0.85); /* var(--accent1-color) @ 85% for AA contrast */
+  color: var(--secondary-color);
 }
 
 .hero article {
-    position: absolute;
-    bottom: 5px;
-    left: 10px;
-    right: 10px;
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.6); 
-    color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.hero img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-h1{
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: var(--secondary-color);
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  right: 10px;
+  padding: var(--space-2);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
 .hero article img {
-    float: right;
-    width: 125px;
-    height: auto;
+  float: right;
+  width: 125px;
+  height: auto;
+  margin-left: var(--space-2);
+  border-radius: var(--radius);
+}
+
+/* ---------- History ---------- */
+.history {
+  padding: var(--space-2);
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--space-2);
+  align-items: start;
+  margin-top: var(--space-1);
+}
+
+.history-figure {
+  margin: 0;
+}
+
+.history-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.history-figure figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  color: #333;
+}
+
+/* ---------- Adventures (5 across strip) ---------- */
+.adventures {
+  padding: var(--space-2);
+}
+
+.adventure-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.adventure-strip figure {
+  background: #fafafa;
+  border: 1px solid #e6e6e6;
+  border-radius: var(--radius);
+  padding: var(--space-1);
+  text-align: center;
+}
+
+.adventure-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.adventure-strip figcaption {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-top: 4px solid var(--accent2-color);
+}
+
+.socialmedia {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.socialmedia a {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.socialmedia a:hover,
+.socialmedia a:focus {
+  background: #eef3f6;
+  outline: none;
+}
+
+.socialmedia img {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+/* ---------- Small screens (keeps layout usable under 840px preview) ---------- */
+@media (max-width: 900px) {
+  /* Header stacks more gracefully if space is tight */
+  .site-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adventure-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

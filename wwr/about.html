@@ -1,67 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Rafting Co.</title>
-    <meta name="description" content="white water rafting, fun, water">
-    <meta name="author" content="Troy Hyten">
-    <link rel="stylesheet" href="styles/rafting.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awesome Rafting Co. — About Us</title>
+  <meta name="description" content="About Awesome Rafting Co. — history, guides, and our river adventures." />
+  <meta name="author" content="Troy Hyten" />
+  <!-- External stylesheet only (no inline/embedded styles) -->
+  <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 
 <body>
-    <header>
-        <nav>
-            <img src="images/z-splash.png" alt="White Water Rafting!">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <!-- Hero Section -->
+  <header class="site-header">
+    <img class="logo" src="images/z-splash.png" alt="Awesome Rafting Co. logo" />
 
-        <div class="hero">
-            <img src="images/background_image.jpg" alt="background image">
-            <h1>Awesome Rafting Co.</h1>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
 
-            <article>
-                <img src="images/worker_yay.jpg" alt="worker_yay">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, perferendis consequuntur. Inventore
-                    cumque voluptates error praesentium similique maiores tenetur corporis accusantium sed autem,
-                    aperiam saepe tempora qui laboriosam quos doloremque!</p>
-            </article>
-        </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <img src="images/background_image.jpg" alt="White water rafting river with rapids" loading="lazy"/>
+      <h1>Awesome Rafting Co.</h1>
+      <article>
+        <img src="images/worker_yay.jpg" alt="Rafting guide celebrating" loading="lazy" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, perferendis consequuntur. Inventore
+          cumque voluptates error praesentium similique maiores tenetur corporis accusantium sed autem, aperiam
+          saepe tempora qui laboriosam quos doloremque!
+        </p>
+      </article>
+    </section>
 
-        <section>
-            <h2>History</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste dolores, voluptatum error totam eveniet
-                blanditiis ad autem eum sapiente earum, beatae commodi excepturi dolore amet nisi. Perferendis pariatur
-                sint doloremque?</p>
-        </section>
-        <section>
-            <h2>Adventure Awaits You!</h2>
-        </section>
+    <!-- History -->
+    <section class="history" aria-labelledby="history-heading">
+      <h2 id="history-heading">History</h2>
 
-    </main>
-    <footer>
-        <p>&copy; 2025 Awesome Rafting Co. - Troy Hyten</p>
+      <div class="history-grid">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste dolores, voluptatum error totam eveniet
+          blanditiis ad autem eum sapiente earum, beatae commodi excepturi dolore amet nisi. Perferendis pariatur
+          sint doloremque?
+        </p>
 
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook.svg" alt="Facebook Icon">
-            </a>
-            <a href="https://linkedin.com">
-                <img src="images/linkedin.svg" alt="LinkedIn Icon">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram.svg" alt="Instagram Icon">
-            </a>
-        </nav>
-    </footer>
+        <!-- You can replace this with a real historical photo if desired -->
+        <figure class="history-figure">
+          <img src="images/history.jpg" alt="Early days of Awesome Rafting Co." loading="lazy" />
+          <figcaption>Our early days on the river.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Adventures (5 figures across) -->
+    <section class="adventures" aria-labelledby="adventures-heading">
+      <h2 id="adventures-heading">Adventure Awaits You!</h2>
+
+      <div class="adventure-strip">
+        <figure>
+          <img src="images/adventure1.jpg" alt="Los Dientes del Diablo rapid" loading="lazy" />
+          <figcaption>Los Dientes del Diablo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure2.jpg" alt="Big Mallard rapid" loading="lazy" />
+          <figcaption>Big Mallard</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure3.jpg" alt="Half Day Adventure group" loading="lazy" />
+          <figcaption>Half Day Adventure</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure4.jpg" alt="Canyon Run" loading="lazy" />
+          <figcaption>Canyon Run</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure5.jpg" alt="Sunset Float" loading="lazy" />
+          <figcaption>Sunset Float</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Awesome Rafting Co. — Troy Hyten</p>
+
+    <nav class="socialmedia" aria-label="Social media">
+      <a href="https://facebook.com" aria-label="Facebook">
+        <img src="images/facebook.svg" alt="" />
+      </a>
+      <a href="https://linkedin.com" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="" />
+      </a>
+      <a href="https://instagram.com" aria-label="Instagram">
+        <img src="images/instagram.svg" alt="" />
+      </a>
+    </nav>
+  </footer>
 </body>
-
-
 </html>
