@@ -27,7 +27,6 @@ body {
   line-height: 1.5;
 }
 
-/* Constrain main sections to 840px */
 header, main, footer {
   width: var(--maxw);
   margin: 0 auto;
